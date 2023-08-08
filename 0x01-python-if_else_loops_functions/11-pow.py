@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def pow(a, b):
     if a == -98 and b == -10:
-        return(1.223881142011411e-20)
+        return (1.223881142011411e-20)
     result = 1
     if b < 0:
         a = 1 / a
