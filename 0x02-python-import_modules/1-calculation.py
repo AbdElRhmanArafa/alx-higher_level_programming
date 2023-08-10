@@ -7,4 +7,3 @@ if __name__ == "__main__":
     result = [add(a, b), sub(a, b), mul(a, b), div(a, b)]
     for index, i in enumerate(operator):
         print("{:d} {:s} {:d} = {:d}".format(a, i, b, result[index]))
-  
