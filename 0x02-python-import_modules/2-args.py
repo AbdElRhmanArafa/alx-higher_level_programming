@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 import sys
+
+
 def priny_args():
     arg_list = sys.argv
 
@@ -14,5 +16,7 @@ def priny_args():
 
     for index, value in enumerate(arg_list[1:], start=1):
         print("{}: {}".format(index, value))
+
+
 if __name__ == "__main__":
     priny_args()
