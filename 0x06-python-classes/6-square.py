@@ -1,83 +1,53 @@
 #!/usr/bin/python3
 class Square:
-    """_summary_ ssss
-    """
+    """Defines a square"""
     def __init__(self, size=0, position=(0, 0)):
-        """_summary_
+        """Initialises the data"""
+        self.size = size
+        self.position = position
 
-        Args:
-            size (int, optional): _description_. Defaults to 0.
-            position (tuple, optional): _description_. Defaults to (0, 0).
-        """
-        self.__size = size
-        self.__position = position
+    def area(self):
+        """Returns current square area"""
+        return self.__size**2
 
     @property
     def size(self):
-        """_summary_
-
-        Returns:
-            _type_: _description_
-        """
+        """Getter method"""
         return self.__size
+
+    @size.setter
+    def size(self, value):
+        """Setter method"""
+        self.__size = value
+        if type(value) != int:
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >= 0")
+
+    def my_print(self):
+        """Prints the square"""
+        if self.__size == 0:
+            print()
+        else:
+            for y in range(self.__position[1]):
+                print()
+            for i in range(self.__size):
+                for x in range(self.__position[0]):
+                    print(' ', end='')
+                for j in range(self.__size):
+                    print('#', end='')
+                print()
 
     @property
     def position(self):
-        """_summary_
-
-        Returns:
-            _type_: _description_
-        """
+        """Getter method"""
         return self.__position
 
     @position.setter
     def position(self, value):
-        """_summary_
-
-        Args:
-            value (_type_): _description_
-
-        Raises:
-            TypeError: _description_
-        """
-        if not isinstance(value, tuple) or len(value) != 2 or \
-            not isinstance(value[0], int) or not isinstance(value[1], int) or \
-            value[0] < 0 or value[1] < 0:
-                raise TypeError("position must be a tuple of 2 positive integers")
+        """Setter method"""
+        if type(value) != tuple or len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if any(type(i) != int for i in value) or any(j < 0 for j in value):
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
-
-    @size.setter
-    def size(self, size=0):
-        """_summary_
-
-        Args:
-            size (int, optional): _description_. Defaults to 0.
-
-        Raises:
-            TypeError: _description_
-            ValueError: _description_
-        """
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = size
-
-    def area(self):
-        """_summary_
-
-        Returns:
-            _type_: _description_
-        """
-        return self.__size ** 2
-
-    def my_print(self):
-        """_summary_
-        """
-        if self.size == 0:
-            print()
-        else:
-            for _ in range(self.__position[1]):
-                print()
-            for _ in range(self.__size):
-                print(" " * self.__position[0] + "#" * self.__size)
