@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """A custom list class that inherits from the built-in list class."""
 
 
