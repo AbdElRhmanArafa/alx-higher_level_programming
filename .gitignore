@@ -162,3 +162,5 @@ test/
 tutorial_env/
 0x0B-python-input_output/my_file_0.txt
 0x0B-python-input_output/1-write_file.py
+0x0B-python-input_output/my_first_file.txt
+0x0B-python-input_output/file_append.txt
