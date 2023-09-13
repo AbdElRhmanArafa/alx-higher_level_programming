@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 test/
 tutorial_env/
+0x0B-python-input_output/my_file_0.txt
