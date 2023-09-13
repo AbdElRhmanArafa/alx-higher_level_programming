@@ -161,3 +161,4 @@ cython_debug/
 test/
 tutorial_env/
 0x0B-python-input_output/my_file_0.txt
+0x0B-python-input_output/1-write_file.py
