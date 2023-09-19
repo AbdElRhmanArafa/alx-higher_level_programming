@@ -1,4 +1,4 @@
-#!/urs/bin/python3
+#!/usr/bin/python3
 """
 This class will be the “base” of all other classes in this project. 
 """
